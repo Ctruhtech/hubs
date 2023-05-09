@@ -14,6 +14,7 @@ export function AvatarSettingsContent({
   avatarPreview,
   displayNamePattern,
   onChangeAvatar,
+  onCreateAvatar,
   ...rest
 }) {
   return (
@@ -36,6 +37,9 @@ export function AvatarSettingsContent({
       />
       <div className={styles.avatarPreviewContainer}>
         {avatarPreview || <div />}
+        <Button type="button"  onClick={onCreateAvatar} className={styles.avatarCreateButton}>
+          {"Create Avatar"}
+        </Button>
         <Button type="button" preset="basic" onClick={onChangeAvatar}>
           <FormattedMessage id="avatar-settings-content.change-avatar-button" defaultMessage="Change Avatar" />
         </Button>
@@ -53,5 +57,6 @@ AvatarSettingsContent.propTypes = {
   displayNamePattern: PropTypes.string,
   onChangeDisplayName: PropTypes.func,
   avatarPreview: PropTypes.node,
-  onChangeAvatar: PropTypes.func
+  onChangeAvatar: PropTypes.func,
+  onCreateAvatar: PropTypes.func
 };
