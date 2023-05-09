@@ -387,7 +387,9 @@ export async function getSceneUrlForHub(hub) {
   let isLegacyBundle; // Deprecated
   if (hub.scene) {
     isLegacyBundle = false;
-    sceneUrl = hub.scene.model_url;
+    // sceneUrl = hub.scene.model_url;
+    sceneUrl = "https://ctruht0.blob.core.windows.net/user-10daf7fb-e834-47b6-8471-c48ae4343e43/b50894cf-248d-4f83-b95e-7b716c4e83dc.glb";
+
   } else if (hub.scene === null) {
     // delisted/removed scene
     sceneUrl = loadingEnvironment;
