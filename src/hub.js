@@ -195,6 +195,7 @@ import { LinkHoverMenuPrefab } from "./prefabs/link-hover-menu";
 import { PDFMenuPrefab } from "./prefabs/pdf-menu";
 import { loadWaypointPreviewModel, WaypointPreview } from "./prefabs/waypoint-preview";
 import { preload } from "./utils/preload";
+import Crater2 from "../src/assets/models/Crater2.glb";
 
 window.APP = new App();
 renderAsEntity(APP.world, VideoMenuPrefab());
@@ -388,8 +389,8 @@ export async function getSceneUrlForHub(hub) {
   if (hub.scene) {
     isLegacyBundle = false;
     // sceneUrl = hub.scene.model_url;
-    sceneUrl = "https://ctruht0.blob.core.windows.net/user-10daf7fb-e834-47b6-8471-c48ae4343e43/b50894cf-248d-4f83-b95e-7b716c4e83dc.glb";
-
+    sceneUrl = Crater2;
+    // sceneUrl = "https://ctruht0.blob.core.windows.net/user-10daf7fb-e834-47b6-8471-c48ae4343e43/b50894cf-248d-4f83-b95e-7b716c4e83dc.glb";
   } else if (hub.scene === null) {
     // delisted/removed scene
     sceneUrl = loadingEnvironment;

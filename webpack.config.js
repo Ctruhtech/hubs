@@ -166,7 +166,7 @@ async function fetchAppConfigAndEnvironmentVars() {
 
   const appConfig = await appConfigsResponse.json();
   if (appConfig.theme?.themes) {
-    appConfig.theme.themes = JSON.parse(appConfig.theme.themes);
+    appConfig.theme.themes = appConfig.theme.themes;
   }
 
   // dev.reticulum.io doesn't run ita

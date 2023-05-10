@@ -185,7 +185,8 @@ export class App {
     // We manually handle resetting this in mainTick so that stats are correctly reported with post effects enabled
     renderer.info.autoReset = false;
 
-    renderer.setPixelRatio(window.devicePixelRatio);
+    // renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(4);
 
     renderer.debug.checkShaderErrors = qsTruthy("checkShaderErrors");
 
